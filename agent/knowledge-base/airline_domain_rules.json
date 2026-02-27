@@ -1,0 +1,5 @@
+{
+  "pnr_structure": "6-character alphanumeric, EBCDIC-encoded on-prem.",
+  "availability_sync": "Inventory must be locked on Mainframe before GCP write.",
+  "ccsid_defaults": {"primary": 37, "secondary": 1140}
+}

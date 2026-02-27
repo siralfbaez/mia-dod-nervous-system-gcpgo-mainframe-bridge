@@ -1,0 +1,18 @@
+syntax = "proto3";
+package api.v1;
+option go_package = "github.com/siralfbaez/mia-dod-nervous-system-gcpgo-mainframe-bridge/api/proto";
+
+message MainframeSignal {
+    string trace_id = 1;
+    bytes ebcdic_payload = 2; // Raw bytes to be transformed
+    int32 ccsid = 3;
+    string source_system = 4; // e.g., "iSeries-Reservation-DB"
+}
+
+service SignalService {
+    rpc StreamSignal(MainframeSignal) returns (SignalResponse);
+}
+
+message SignalResponse {
+    string status = 1;
+}
