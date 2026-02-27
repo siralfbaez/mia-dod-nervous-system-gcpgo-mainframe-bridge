@@ -35,6 +35,7 @@ graph TD
 
 ```
 ---
+```Text
 
 mia-dod-nervous-system-gcpgo-mainframe-bridge
 ├── 🤖 agent                   # AI logic & Prompt Engineering
@@ -62,4 +63,5 @@ mia-dod-nervous-system-gcpgo-mainframe-bridge
 └── 🏗️ terraform               # The Skeleton (Infrastructure as Code)
     ├── environments           # Dev/Prod Multi-stage configs
     └── modules                # Reusable GCP Components (GKE, AlloyDB)
-    
+
+```
