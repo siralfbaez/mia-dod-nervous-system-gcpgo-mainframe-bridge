@@ -1,0 +1,1 @@
+output "cluster_id" { value = google_alloydb_cluster.main_cluster.id }
