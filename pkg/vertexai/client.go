@@ -2,6 +2,7 @@ package vertexai
 
 import (
 	"context"
+	"fmt"
 	"cloud.google.com/go/vertexai/genai"
 )
 

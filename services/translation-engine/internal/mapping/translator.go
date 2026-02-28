@@ -3,6 +3,7 @@ package mapping
 import (
 	"bytes"
 	"io"
+	"golang.org/x/text/encoding/charmap"
 	"golang.org/x/text/transform"
 )
 

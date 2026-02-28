@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"log"
 	"os"
-
 	_ "github.com/lib/pq" // PostgreSQL driver for AlloyDB
 	"github.com/siralfbaez/mia-dod-nervous-system-gcpgo-mainframe-bridge/services/worker-pubsub/internal/processor"
 )
@@ -26,8 +25,11 @@ func main() {
 	proc := &processor.RecordProcessor{
 		DB: db,
 	}
+    // FIX: Actually use the variable so the compiler is happy
 
-	log.Println("📥 Worker-PubSub active: Listening for cloud-native passenger records...")
+    log.Printf("📥 Worker-PubSub initialized with processor: %T", proc)
+
+	// log.Println("📥 Worker-PubSub active: Listening for cloud-native passenger records...")
 
 	// In a production scenario, this would be a Pub/Sub pull subscriber loop
 	// For the scaffold, we simulate the persistent process
